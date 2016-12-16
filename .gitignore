@@ -35,3 +35,11 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+www/
+www/**
+.DS_Store
+
+# Folders to ignore
+bower
+source/bower
