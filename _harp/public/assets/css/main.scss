@@ -1,0 +1,48 @@
+@import url(font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
+
+@import 'modules/reset';
+@import 'modules/grid';
+
+body {
+  background: #fe8935;
+}
+
+.container {
+  background: #fff;
+}
+
+nav{
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+
+  #nav-bg{
+    width: auto;
+    min-width: 100%;
+    max-height: 200px;
+    z-index: -2;
+    position: fixed;
+    bottom: 0px;
+  }
+  #logo {
+    float: left;
+    margin: 0px 30px;
+  }
+
+  .menu{
+    float: left;
+    li {
+      list-style: none;
+      float: left;
+      margin: 0px 15px;
+    }
+  }
+}
+
+
+header{
+  img{
+    width:100%;
+  }
+}
