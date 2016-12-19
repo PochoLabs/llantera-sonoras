@@ -19,6 +19,14 @@ var paths = {
 	harpCompiled: 'www/'
 };
 
+gulp.task('setup', function(){
+	gulp.src('node_modules/aos/dist/aos.css')
+		.pipe(gulp.dest('_harp/public/assets/css/'));
+
+	gulp.src('node_modules/aos/dist/aos.js')
+		.pipe(gulp.dest('_harp/public/assets/js/'));
+});
+
 
 // Live Reload
 

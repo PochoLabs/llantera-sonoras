@@ -21,7 +21,7 @@
     "url": "https://github.com/PochoLabs/llantera-sonoras/issues"
   },
   "homepage": "https://github.com/PochoLabs/llantera-sonoras",
-	"devDependencies": {
+  "devDependencies": {
     "browser-sync": "^2.13.0",
     "del": "^2.2.1",
     "gulp": "^3.9.1",
@@ -32,5 +32,8 @@
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.8",
     "harp": "^0.20.3"
+  },
+  "dependencies": {
+    "aos": "^2.1.1"
   }
 }
