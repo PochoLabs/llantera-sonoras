@@ -23,27 +23,30 @@ html
 			meta(name='theme-color', content='#ffffff')
 
 	body
-		.container
-			nav.top
-				#logo
-					img(src="http://placehold.it/100x50", alt="Logo")
-				.top-menu
-					ul
-						li
-							a(href="#") Services
-						li
-							a(href="#") Call
-						li
-							a(href="#") Visit
-						li
-							a(href="#") Deals
-						li
-							select
-								option(value="English") English
-								option(value="Spanish") Espanol
+		//- .container
+		//- 	nav.top
+		//- 		#logo
+		//- 			img(src="http://placehold.it/100x50", alt="Logo")
+		//- 		.top-menu
+		//- 			ul
+		//- 				li
+		//- 					a(href="#") Services
+		//- 				li
+		//- 					a(href="#") Call
+		//- 				li
+		//- 					a(href="#") Visit
+		//- 				li
+		//- 					a(href="#") Deals
+		//- 				li
+		//- 					select
+		//- 						option(value="English") English
+		//- 						option(value="Spanish") Espanol
 
 		nav.bottom
 			#nav-bg(src="assets/images/navbg.png")
+			#menu-icon
+				a(href="#")
+					i.fa.fa-bars
 			.bottom-menu
 				ul
 					li
@@ -61,9 +64,18 @@ html
 
 
 
-
 		header
-			img(src="http://lorempixel.com/1400/800/abstract", alt="Sonoras Tire Shop")
+			img(src="assets/images/shop2.jpg", alt="Sonoras Tire Shop")
+			.overlay.red
+			.content.container
+				.row
+					.column.colunm-12
+						img.header-logo(src="http://lorempixel.com/300/150/abstract", alt="LOGO")
+				.row
+					.column.column-6
+						h1 Guaranteed Service!
+					.column.column-6
+						p.headline-text Come see why our customers keep coming back!
 		.container
 			.col-1-2
 				h1 LLanteras Sonora's
