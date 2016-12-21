@@ -118,7 +118,7 @@ header{
     top: 0px;
     float: left;
     background: none;
-    color: #fff;
+    color: #000;
   }
 }
 
@@ -143,5 +143,8 @@ footer {
   }
   &.red{
     background-color: rgba(79, 0, 0, 0.8);
+  }
+  &.yellow{
+    background-color: rgba(255, 243, 91, 0.8);
   }
 }
