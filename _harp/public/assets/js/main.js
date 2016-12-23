@@ -5,17 +5,7 @@ AOS.init({
 });
 
 
-// Smoothscroll
 
-var links = document.querySelectorAll('a.scroll');
-
-function smoothscroll() {
-  var toGo = this.getAttribute("href");
-  document.querySelector(toGo).scrollIntoView({ behavior: 'smooth' });
-  //console.log(this);
-}
-
-links.forEach(link => link.addEventListener('click', smoothscroll));
 
 // Modal for language selection
 
@@ -42,15 +32,24 @@ var langButtons = document.querySelectorAll('.language-button');
 
 langButtons.forEach(button => button.addEventListener('click', function() {
   var langToChangeTo = this.dataset.lang;
-  console.log('Changing language to: ' + langToChangeTo);
   translatableContent.forEach((item) => {
     var newText = item.dataset[langToChangeTo];
-    console.log('New text: ' + newText);
     item.innerHTML = newText;
   });
 }));
 
 
+// Smoothscroll
+
+var links = document.querySelectorAll('a.scroll');
+
+function smoothscroll() {
+  var toGo = this.getAttribute("href");
+  document.querySelector(toGo).scrollIntoView({ behavior: 'smooth' });
+  //console.log(this);
+}
+
+links.forEach(link => link.addEventListener('click', smoothscroll));
 
 
 var canvas = document.getElementById('canvas');
