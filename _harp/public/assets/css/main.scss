@@ -109,7 +109,7 @@ nav.bottom{
     height: 60px;
     overflow: hidden;
     ul {
-      width: 300px;
+      width: 400px;
       margin: 0px auto;
       li {
         list-style: none;
@@ -218,6 +218,24 @@ section {
     position: relative;
     .column {
       margin-top: 15px;
+      -moz-transition: all $anim-timing-service;
+      -webkit-transition: all $anim-timing-service;
+      transition: all $anim-timing-service;
+      &:hover{
+        .black{
+          -moz-transition: all $anim-timing-service;
+          -webkit-transition: all $anim-timing-service;
+          transition: all $anim-timing-service;
+          background-color: rgba(0,0,0,.5);
+        }
+        p {
+          -moz-transition: all $anim-timing-service;
+          -webkit-transition: all $anim-timing-service;
+          transition: all $anim-timing-service;
+          transform: translateY(-50px);
+          font-size: 1.8em;
+        }
+      }
     }
     .content {
       position: absolute;

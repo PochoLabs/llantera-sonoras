@@ -33,13 +33,16 @@ html
 			.bottom-menu
 				ul.text-center
 					li
-						a(href="#contact")
+						a.scroll(href="#top")
+							i.fa.fa-home
+					li
+						a.scroll(href="#contact")
 							i.fa.fa-phone
 					li
-						a(href="#location")
+						a.scroll(href="#location")
 							i.fa.fa-map-marker
 					li
-						a(href="#hours")
+						a.scroll(href="#hours")
 							i.fa.fa-clock-o
 					li
 						a(href="#language")
@@ -47,7 +50,7 @@ html
 
 
 
-		header
+		header#top
 			//img(src="assets/images/shop2.jpg", alt="Sonoras Tire Shop")
 			.overlay.black
 			.content
@@ -183,4 +186,5 @@ html
 		// Scripts
 
 		script(src="assets/js/aos.js")
+		script(src="assets/js/smoothscroll.js")
 		script(src='assets/js/main.js')

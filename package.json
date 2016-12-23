@@ -34,6 +34,7 @@
     "harp": "^0.20.3"
   },
   "dependencies": {
-    "aos": "^2.1.1"
+    "aos": "^2.1.1",
+    "smoothscroll-polyfill": "^0.3.4"
   }
 }

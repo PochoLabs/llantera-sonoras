@@ -4,6 +4,16 @@ AOS.init({
   duration: 1200
 });
 
+var links = document.querySelectorAll('a.scroll');
+
+function smoothscroll() {
+  var toGo = this.getAttribute("href");
+  document.querySelector(toGo).scrollIntoView({ behavior: 'smooth' });
+  //console.log(this);
+}
+
+links.forEach(link => link.addEventListener('click', smoothscroll));
+
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
@@ -670,8 +680,8 @@ ctx.save();
 ctx.fillStyle = "rgba(255, 253, 17, 1)";
 ctx.shadowOffsetX = 0;
 ctx.shadowOffsetY = 0;
-ctx.shadowBlur = 24;
-ctx.shadowColor = 'rgba(255, 253, 17, 0.9)';
+ctx.shadowBlur = 34;
+ctx.shadowColor = 'rgba(245, 244, 91, 0.82)';
 
 ctx.beginPath();
 ctx.moveTo(194.789,94.939);
