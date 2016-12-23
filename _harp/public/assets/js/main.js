@@ -35,6 +35,23 @@ modalContainer.forEach(modal => modal.addEventListener('click', function() {
   this.removeAttribute('class');
 }));
 
+// Translation
+
+var translatableContent = document.querySelectorAll('.i18n');
+var langButtons = document.querySelectorAll('.language-button');
+
+langButtons.forEach(button => button.addEventListener('click', function() {
+  var langToChangeTo = this.dataset.lang;
+  console.log('Changing language to: ' + langToChangeTo);
+  translatableContent.forEach((item) => {
+    var newText = item.dataset[langToChangeTo];
+    console.log('New text: ' + newText);
+    item.innerHTML = newText;
+  });
+}));
+
+
+
 
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
