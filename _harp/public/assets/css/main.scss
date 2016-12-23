@@ -4,6 +4,7 @@
 @import 'modules/variables';
 @import 'modules/reset';
 @import 'modules/grid';
+@import 'modules/buttons';
 
 @import 'aos';
 
@@ -233,9 +234,20 @@ section {
   }
   &#contact {
     background-color: $color-black;
-
     background-position: top;
     color: #fff;
+    p {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    a.button {
+      text-align: center;
+      display: inline-block;
+      width: 80%;
+      position: relative;
+      margin: 40px auto;
+    }
   }
 
   &#location {
