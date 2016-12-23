@@ -1,6 +1,7 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
 
+@import 'modules/variables';
 @import 'modules/reset';
 @import 'modules/grid';
 
@@ -13,11 +14,18 @@
 body {
   background: #fff35a;
   overflow-x: hidden;
+  color: $color-black;
 }
 
-.container {
-  background: #fff;
+h1,
+h2,
+h3 {
+  font-weight: bolder;
 }
+
+// .container {
+//   background: #fff;
+// }
 
 nav.top{
   background-color: #84ed1b;
@@ -68,12 +76,12 @@ nav.bottom{
   }
 
   #nav-bg{
-    background: url('../images/navbg2.png');
+    background: url('../images/navbg.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
     min-width: 100%;
-    height: 100px;
+    height: 150px;
     position: fixed;
     bottom: 0px;
     left: 0px;
@@ -119,6 +127,9 @@ header{
     width: 100%;
     margin: 0px auto;
     height: 100%;
+    #deer{
+      fill: #ececec;
+    }
   }
   .content{
     width: 800px;
@@ -126,12 +137,17 @@ header{
     margin: 0px auto;
     //position: absolute;
     background: none;
-    color: #303030;
+    color: #ececec;
   }
 }
 
 footer {
-  background: #303030;
+  position: relative;
+  background: $color-black;
+  background: url('../images/shop2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
   padding: 50px 50px 400px 50px;
 }
 
@@ -155,5 +171,27 @@ footer {
   }
   &.yellow{
     background-color: rgba(255, 243, 91, 0.8);
+  }
+}
+
+// Section layout
+
+section {
+  width: 100%;
+  width: 100vw;
+  position: relative;
+  .container{
+    padding: 30px;
+  }
+  &#services {
+
+    color: $color-black;
+    position: relative;
+  }
+  &#contact {
+    background-color: #060120;
+
+    background-position: top;
+    color: #fff;
   }
 }
