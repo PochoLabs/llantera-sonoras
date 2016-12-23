@@ -4,6 +4,9 @@ AOS.init({
   duration: 1200
 });
 
+
+// Smoothscroll
+
 var links = document.querySelectorAll('a.scroll');
 
 function smoothscroll() {
@@ -13,6 +16,25 @@ function smoothscroll() {
 }
 
 links.forEach(link => link.addEventListener('click', smoothscroll));
+
+// Modal for language selection
+
+var languageLink = document.querySelectorAll('#four');
+var modalContainer = document.querySelectorAll('#modal-container');
+var body = document.querySelector('body');
+
+languageLink.forEach(link => link.addEventListener('click', function() {
+  var buttonId = this.getAttribute('id');
+  document.querySelector('#modal-container').classList.add(buttonId);
+  body.classList.add('modal-active');
+}));
+
+modalContainer.forEach(modal => modal.addEventListener('click', function() {
+  this.classList.add('out');
+  body.classList.remove('modal-active');
+  this.removeAttribute('class');
+}));
+
 
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');

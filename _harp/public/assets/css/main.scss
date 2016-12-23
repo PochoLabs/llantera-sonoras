@@ -3,6 +3,7 @@
 
 @import 'modules/variables';
 @import 'modules/reset';
+@import 'modules/modal';
 @import 'modules/grid';
 @import 'modules/buttons';
 
@@ -12,7 +13,7 @@
   width: 100%;
 }
 
-body {
+body, html {
   background: #fff35a;
   overflow-x: hidden;
   color: $color-black;
