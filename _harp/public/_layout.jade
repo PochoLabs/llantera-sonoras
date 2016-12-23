@@ -25,7 +25,7 @@ html
 	body
 
 
-		nav.bottom
+		nav.bottom(data-aos="slide-up", data-aos-anchor="body", data-aos-placement="top-top")
 			#nav-bg(src="assets/images/navbg.png")
 			//- #menu-icon
 			//- 	a(href="#")
@@ -55,7 +55,7 @@ html
 					.column.colunm-12
 						//img.header-logo.img-responsive(src="assets/images/logo.svg", alt="LOGO")
 						//!= partial('_partials/logo.jade')
-						canvas#canvas(width="800", height="400")
+						canvas#canvas(width="800", height="400", data-aos="flip-down")
 				.row
 					.column.column-6
 						h1 Guaranteed Service!
