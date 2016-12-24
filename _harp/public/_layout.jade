@@ -25,6 +25,22 @@ html
 		meta(name='theme-color', content='#fff35a')
 
 	body
+		script.
+			window.fbAsyncInit = function() {
+			FB.init({
+			appId      : '1078799428909726',
+			xfbml      : true,
+			version    : 'v2.8'
+			});
+			};
+			(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+
 
 
 		nav.bottom(data-aos="slide-up", data-aos-anchor="body", data-aos-placement="top-top")
@@ -58,6 +74,8 @@ html
 						h1.i18n(data-en="Guaranteed Service!", data-es="Servicio Garantizado!") Guaranteed Service!
 					.column.column-6
 						p.headline-text.i18n(data-en="Come see why our customers keep coming back!", data-es="Ven a saber porque nuestra clientela sigue regresando!") Come see why our customers keep coming back!
+						.fb-like(data-share='true', data-width='450', data-show-faces='true')
+
 
 		section#services
 			.container
