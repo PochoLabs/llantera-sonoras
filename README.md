@@ -1,45 +1,46 @@
-# llantera-sonoras
-Static website for local Phoenix tire shop.
-
-# Harp-Bootstrap Starter
-A rapid prototyping tool using Harp.js and Twitter Bootstrap.
-
-Harp.js can be a really cool tool for rapid prototyping, or simply some wireframing. That's how I use it at least.
-
-This is a tool I built for myself so I can easily make wireframes for clients.
+# Sonora's Tire Shop Static Website
+Static website for local Phoenix tire shop at [http://sonoratires.com](http://sonoratires.com).
 
 ## Requirements
 
-Assuming you have NPM (Node Package Manager) on your machine, just run:
+- Harp (static site generator)
+- Gulp (node.js task runner)
+- Surge (free static site hosting)
+
 ```
-sudo npm install -g harp
+npm install -g harp gulp surge
 ```
-If command is not working visit [their site](http://harpjs.com) for complete instructions.
+
+
 ## How To Use
 
-### For Rapid Protopyping
+Assuming you have NPM (Node Package Manager) on your machine, just run:
+```
+sudo npm install
+```
 
 First clone the repository to your working directory
 ```
-git clone https://github.com/celsom3/Harp-Bootstrap-Starter.git
+git clone https://github.com/PochoLabs/llantera-sonoras.git
 ```
 Move into that directory
 ```
-cd Harp-Bootstrap-Starter
+cd llantera-sonoras
 ```
-Since you already have Harp.js installed, just run:
+To start a local server with live reload, run:
 ```
-harp server
+gulp
 ```
 
-### Compiling
+### Compiling and Deploying
 
-Once your are done, you might like to use the compiled files for whatever reasons (WordPress theme, Drupal theme, Meteor, Static Site server, etc). To get that output simply run the command:
+Once your are done editing it is time to compile and deploy to surge. To get that output simply run the command:
 ```
-harp compile
+gulp compile
 ```
 This will generate a `/www` folder in your directory where the compile and minified html, css, and JavaScript will be.
 
-## Buy me a coffee
-
-If you like this tool, consider [buying a cup of coffee](https://cash.me/$celsom3).
+To deploy:
+```
+surge
+```
