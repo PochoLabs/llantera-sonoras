@@ -1,53 +1,112 @@
-AOS.init({
-  duration: 1200
+$(document).ready(function(){
+
+  AOS.init({
+    duration: 1200
+  });
+
+
+  // Service modals
+
+  // var serviceModals = document.querySelectorAll('.service-row > .column');
+  //
+  // serviceModals.forEach(service => service.addEventListener('click', function(){
+  //   console.log('modal clicked');
+  // }));
+
+
+  // Initialize modals
+	$('#service1').apFullscreenModal({
+		openSelector: '#service1-link',
+		showCloseButton: true
+		// autoOpen: true
+	});
+	$('#service2').apFullscreenModal({
+		openSelector: '#service2-link',
+		showCloseButton: true
+	});
+	$('#service3').apFullscreenModal({
+		openSelector: '#service3-link',
+		showCloseButton: true
+	});
+
+  $('#service4').apFullscreenModal({
+		openSelector: '#service4-link',
+		showCloseButton: true
+		// autoOpen: true
+	});
+	$('#service5').apFullscreenModal({
+		openSelector: '#service5-link',
+		showCloseButton: true
+	});
+	$('#service6').apFullscreenModal({
+		openSelector: '#service6-link',
+		showCloseButton: true
+	});
+
+  $('#service7').apFullscreenModal({
+		openSelector: '#service7-link',
+		showCloseButton: true
+		// autoOpen: true
+	});
+	$('#service8').apFullscreenModal({
+		openSelector: '#service8-link',
+		showCloseButton: true
+	});
+	$('#service9').apFullscreenModal({
+		openSelector: '#service9-link',
+		showCloseButton: true
+	});
+  // Modal for language selection
+
+  var languageLink = document.querySelectorAll('#four');
+  var modalContainer = document.querySelectorAll('#modal-container');
+  var body = document.querySelector('body');
+
+  languageLink.forEach(link => link.addEventListener('click', function() {
+    var buttonId = this.getAttribute('id');
+    document.querySelector('#modal-container').classList.add(buttonId);
+    body.classList.add('modal-active');
+  }));
+
+  modalContainer.forEach(modal => modal.addEventListener('click', function() {
+    this.classList.add('out');
+    body.classList.remove('modal-active');
+    this.removeAttribute('class');
+  }));
+
+  // Translation
+
+  var translatableContent = document.querySelectorAll('.i18n');
+  var langButtons = document.querySelectorAll('.language-button');
+
+  langButtons.forEach(button => button.addEventListener('click', function() {
+    var langToChangeTo = this.dataset.lang;
+    translatableContent.forEach((item) => {
+      var newText = item.dataset[langToChangeTo];
+      item.innerHTML = newText;
+    });
+  }));
+
+
+  // Smoothscroll
+
+  var links = document.querySelectorAll('a.scroll');
+
+  function smoothscroll() {
+    var toGo = this.getAttribute("href");
+    document.querySelector(toGo).scrollIntoView({ behavior: 'smooth' });
+    //console.log(this);
+  }
+
+  links.forEach(link => link.addEventListener('click', smoothscroll));
+
+
 });
 
 
 
 
-// Modal for language selection
 
-var languageLink = document.querySelectorAll('#four');
-var modalContainer = document.querySelectorAll('#modal-container');
-var body = document.querySelector('body');
-
-languageLink.forEach(link => link.addEventListener('click', function() {
-  var buttonId = this.getAttribute('id');
-  document.querySelector('#modal-container').classList.add(buttonId);
-  body.classList.add('modal-active');
-}));
-
-modalContainer.forEach(modal => modal.addEventListener('click', function() {
-  this.classList.add('out');
-  body.classList.remove('modal-active');
-  this.removeAttribute('class');
-}));
-
-// Translation
-
-var translatableContent = document.querySelectorAll('.i18n');
-var langButtons = document.querySelectorAll('.language-button');
-
-langButtons.forEach(button => button.addEventListener('click', function() {
-  var langToChangeTo = this.dataset.lang;
-  translatableContent.forEach((item) => {
-    var newText = item.dataset[langToChangeTo];
-    item.innerHTML = newText;
-  });
-}));
-
-
-// Smoothscroll
-
-var links = document.querySelectorAll('a.scroll');
-
-function smoothscroll() {
-  var toGo = this.getAttribute("href");
-  document.querySelector(toGo).scrollIntoView({ behavior: 'smooth' });
-  //console.log(this);
-}
-
-links.forEach(link => link.addEventListener('click', smoothscroll));
 
 
 var canvas = document.getElementById('canvas');

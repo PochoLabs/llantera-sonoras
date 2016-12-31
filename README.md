@@ -1,6 +1,25 @@
 # Sonora's Tire Shop Static Website
 Static website for local Phoenix tire shop at [http://sonoratires.com](http://sonoratires.com).
 
+## To Do List
+
+- Create modals for services
+- Add pictures to modals
+
+
+#### Picture I have
+- Accessories
+- New and Used Tire
+- Venta y compra de Rines
+- Tire Balancing
+- Tire Repair
+
+#### Las que faltan
+- Road Side Assistance
+- Brakes
+- Rotation
+- Fix Rims
+
 ## Requirements
 
 - Harp (static site generator)
