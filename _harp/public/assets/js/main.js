@@ -5,15 +5,6 @@ $(document).ready(function(){
   });
 
 
-  // Service modals
-
-  // var serviceModals = document.querySelectorAll('.service-row > .column');
-  //
-  // serviceModals.forEach(service => service.addEventListener('click', function(){
-  //   console.log('modal clicked');
-  // }));
-
-
   // Initialize modals
 	$('#service1').apFullscreenModal({
 		openSelector: '#service1-link',
@@ -1588,4 +1579,4 @@ draw(ctx);
 
   // Actually loads the image
   image.src = url;
-})('http://pocholabs.com/img/logo.svg');
+})('http://sonoratires.com/assets/images/project-of.svg');

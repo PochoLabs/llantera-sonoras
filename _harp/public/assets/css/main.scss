@@ -246,6 +246,7 @@ section {
       -moz-transition: all $anim-timing-service;
       -webkit-transition: all $anim-timing-service;
       transition: all $anim-timing-service;
+      cursor: pointer;
       &:hover{
         .black{
           -moz-transition: all $anim-timing-service;
